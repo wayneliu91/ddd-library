@@ -11,12 +11,20 @@
     <groupId>com.shh</groupId>
     <artifactId>ddd-library</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+
     <packaging>pom</packaging>
+
     <name>ddd-library</name>
     <description>ddd-library</description>
 
     <properties>
         <java.version>23</java.version>
     </properties>
+
+    <modules>
+        <module>ddd-library-domain</module>
+        <module>ddd-library-web</module>
+    </modules>
 
 </project>
