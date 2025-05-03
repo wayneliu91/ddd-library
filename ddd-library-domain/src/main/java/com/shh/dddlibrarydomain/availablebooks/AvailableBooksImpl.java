@@ -19,6 +19,10 @@ public class AvailableBooksImpl implements AvailableBooks {
   @Id private String isbn;
   @ElementCollection private Set<String> bookIds;
 
+  public AvailableBooksImpl(String isbn) {
+    this.isbn = isbn;
+  }
+
   @Override
   public boolean containsBook(String bookId) {
     return bookIds.contains(bookId);

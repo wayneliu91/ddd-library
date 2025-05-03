@@ -1,5 +1,7 @@
 package com.shh.dddlibrarydomain.book;
 
+import com.shh.dddlibrarydomain.common.DomainException;
+
 public interface BookRepository {
   /**
    * 根据书籍 ID 查找书籍，如果未找到则抛出异常
@@ -7,7 +9,7 @@ public interface BookRepository {
    * @param bookId 书籍 ID
    * @return 找到的书籍对象
    */
-  Book findByIdOrError(String bookId);
+  Book findByIdOrError(String bookId) throws DomainException;
 
   /**
    * 根据书籍 ID 查找书籍，可能返回 null
