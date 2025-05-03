@@ -1,4 +1,4 @@
-package com.shh.dddlibrarydomain;
+package com.shh.dddlibrarydomain.common;
 
 public class DomainException extends Exception {
   public DomainException(String message) {

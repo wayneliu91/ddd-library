@@ -1,6 +1,6 @@
 package com.shh.dddlibrarydomain.availablebooks;
 
-import com.shh.dddlibrarydomain.ApplicationContextUtils;
+import com.shh.dddlibrarydomain.common.ApplicationContextUtil;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -35,7 +35,7 @@ public class AvailableBooksImpl implements AvailableBooks {
       return;
     }
     bookIds.add(bookId);
-    ApplicationContextUtils.eventPublisher().publish(new BookAvailableEvent(isbn, bookId));
+    ApplicationContextUtil.eventPublisher().publish(new BookAvailableEvent(isbn, bookId));
   }
 
   @Override
@@ -44,7 +44,7 @@ public class AvailableBooksImpl implements AvailableBooks {
       return;
     }
     bookIds.remove(bookId);
-    ApplicationContextUtils.eventPublisher().publish(new BookUnavailableEvent(isbn, bookId));
+    ApplicationContextUtil.eventPublisher().publish(new BookUnavailableEvent(isbn, bookId));
   }
 
   @Override

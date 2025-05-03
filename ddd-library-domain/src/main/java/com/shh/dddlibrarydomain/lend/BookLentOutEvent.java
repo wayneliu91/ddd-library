@@ -1,13 +1,14 @@
 package com.shh.dddlibrarydomain.lend;
 
-import com.shh.dddlibrarydomain.DomainEvent;
+import com.shh.dddlibrarydomain.common.DomainEvent;
 import com.shh.dddlibrarydomain.user.UserId;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.time.LocalDateTime;
+import lombok.experimental.Accessors;
 
 @Data
+@Accessors(chain = true)
 @AllArgsConstructor
 public class BookLentOutEvent implements DomainEvent {
   private final LendId lendId;

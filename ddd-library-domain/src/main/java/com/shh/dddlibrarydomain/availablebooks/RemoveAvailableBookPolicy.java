@@ -1,10 +1,10 @@
 package com.shh.dddlibrarydomain.availablebooks;
 
-import com.shh.dddlibrarydomain.DomainEvent;
-import com.shh.dddlibrarydomain.DomainEventListener;
 import com.shh.dddlibrarydomain.book.Book;
 import com.shh.dddlibrarydomain.book.BookRepository;
 import com.shh.dddlibrarydomain.book.BookTakenOffShelfEvent;
+import com.shh.dddlibrarydomain.common.DomainEvent;
+import com.shh.dddlibrarydomain.common.DomainEventListener;
 import com.shh.dddlibrarydomain.lend.BookLentOutEvent;
 import com.shh.dddlibrarydomain.reservation.BookReservedEvent;
 import lombok.AllArgsConstructor;

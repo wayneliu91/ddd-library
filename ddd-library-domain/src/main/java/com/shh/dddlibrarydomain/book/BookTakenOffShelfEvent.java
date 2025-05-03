@@ -1,6 +1,6 @@
 package com.shh.dddlibrarydomain.book;
 
-import com.shh.dddlibrarydomain.DomainEvent;
+import com.shh.dddlibrarydomain.common.DomainEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

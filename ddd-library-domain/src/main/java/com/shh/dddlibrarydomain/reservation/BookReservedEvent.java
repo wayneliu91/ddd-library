@@ -1,11 +1,10 @@
 package com.shh.dddlibrarydomain.reservation;
 
-import com.shh.dddlibrarydomain.DomainEvent;
+import com.shh.dddlibrarydomain.common.DomainEvent;
 import com.shh.dddlibrarydomain.user.UserId;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor

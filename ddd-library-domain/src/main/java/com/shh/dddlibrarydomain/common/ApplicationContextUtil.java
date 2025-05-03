@@ -1,4 +1,4 @@
-package com.shh.dddlibrarydomain;
+package com.shh.dddlibrarydomain.common;
 
 import com.shh.dddlibrarydomain.availablebooks.AvailableBooksRepository;
 import com.shh.dddlibrarydomain.book.BookRepository;
@@ -8,13 +8,13 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ApplicationContextUtils implements ApplicationContextAware {
+public class ApplicationContextUtil implements ApplicationContextAware {
 
   private static ApplicationContext spring;
 
   @Override
   public void setApplicationContext(ApplicationContext context) throws BeansException {
-    ApplicationContextUtils.spring = context;
+    ApplicationContextUtil.spring = context;
   }
 
   public static AvailableBooksRepository availableBooksRepository() {
