@@ -8,21 +8,16 @@ import jakarta.persistence.Table;
 import java.util.Random;
 import java.util.Set;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "AvailableBooks")
 @Table(name = "t_available_books")
+@NoArgsConstructor
 @AllArgsConstructor
 public class AvailableBooksImpl implements AvailableBooks {
 
   @Id private String isbn;
-
   @ElementCollection private Set<String> bookIds;
-
-  public AvailableBooksImpl() {}
-
-  public AvailableBooksImpl(String isbn) {
-    this.isbn = isbn;
-  }
 
   @Override
   public boolean containsBook(String bookId) {

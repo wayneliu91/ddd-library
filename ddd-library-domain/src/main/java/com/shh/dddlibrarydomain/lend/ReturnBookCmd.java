@@ -1,15 +1,12 @@
-package com.shh.dddlibrarydomain.availablebooks;
+package com.shh.dddlibrarydomain.lend;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
-@NoArgsConstructor
 @AllArgsConstructor
-public class RemoveFromAvailableCmd {
-  private String isbn;
+public class ReturnBookCmd {
   private String bookId;
 }

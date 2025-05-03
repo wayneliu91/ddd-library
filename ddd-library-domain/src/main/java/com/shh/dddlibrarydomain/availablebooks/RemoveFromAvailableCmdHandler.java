@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @AllArgsConstructor
 public class RemoveFromAvailableCmdHandler {
-  private AvailableBooksRepository availableBooksRepository;
+  private final AvailableBooksRepository availableBooksRepository;
 
   public void handle(RemoveFromAvailableCmd cmd) {
     AvailableBooks availableBooks = availableBooksRepository.findById(cmd.getIsbn());

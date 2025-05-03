@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class RemoveAvailableBookPolicy implements DomainEventListener {
 
-  private BookRepository bookRepository;
-  private RemoveFromAvailableCmdHandler removeFromAvailableCmdHandler;
+  private final BookRepository bookRepository;
+  private final RemoveFromAvailableCmdHandler removeFromAvailableCmdHandler;
 
   @EventListener(classes = BookTakenOffShelfEvent.class)
   @Override
